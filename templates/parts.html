@@ -1,0 +1,14 @@
+<table>
+    <thead> <tr><td>ENSEMBL GeneID</td><td>Gene name</td></tr></thead>
+    <tbody>
+        {% for (ensembl_gene_id, associated_gene_name) in data %} 
+        <tr>
+            <td><a href="{{url_for('gene_view', id=ensembl_gene_id)}}">
+                {{ensembl_gene_id}}
+            </a></td>
+            <td><a href="{{url_for('gene_view', id=ensembl_gene_id)}}">
+                {{associated_gene_name}}
+            </a></td>
+        </tr>
+        {% endfor %}
+    </tbody>

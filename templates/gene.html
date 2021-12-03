@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>
+    Gene informations
+</h3>
+<table>
+    <tr><td>GeneID</td><td>{{gene[0]}}</td></tr>
+    <tr><td>Gene name</td><td>{{gene[1]}}</td></tr>
+    <tr><td>Chromosome</td><td>{{gene[2]}}</td></tr>
+    <tr><td>Band</td><td>{{gene[3]}}</td></tr>
+    <tr><td>Strand</td><td>{{gene[4]}}</td></tr>
+    <tr><td>Gene start</td><td>{{gene[5]}}</td></tr>
+    <tr><td>Gene end</td><td>{{gene[6]}}</td></tr>
+    <tr><td>Transcript count</td><td>{{gene[7]}}</td></tr>
+</table>
+
+<h3>Related transcripts informations</h3>
+{% include "transcript_list.html" %}
+<img src="{{url_for('get_transcripts_per_gene_svg', gene=gene[0])}}" />
+<h3>Found in following organism parts</h3>
+{% include "part_list.html" %}
+{% endblock %}
