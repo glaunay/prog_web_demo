@@ -1,0 +1,13 @@
+<table>
+    <tbody>
+        <tr><td>Ensembl Transcript ID </td><td>{{ transcript.Ensembl_Transcript_ID }} </td> </tr>
+        <tr><td>Ensembl Gene ID </td>
+            <td> <a href="{{url_for('gene_view', id=transcript.Ensembl_Gene_ID)}}">
+                {{transcript.Ensembl_Gene_ID}}
+            </a></td>
+        </tr>
+        <tr><td>Transcript start </td><td>{{transcript.Transcript_Start}}</td></tr>
+        <tr><td>Transcript end </td><td>{{transcript.Transcript_End}}</td></tr>
+        <tr><td>Transcript biotype </td><td>{{transcript.Transcript_Biotype}}</td></tr>
+    </tbody>
+</table>

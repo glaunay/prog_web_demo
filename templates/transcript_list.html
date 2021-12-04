@@ -10,10 +10,14 @@
     <tbody>
     {% for t in transcripts %}
     <tr>
-        <td>{{t[0]}}</td>
-        <td>{{t[1]}}</td>
-        <td>{{t[2]}}</td>
-        <td>{{t[3]}}</td>
+        <td>
+            <a href="{{url_for('transcript_view', t_id=t.Ensembl_Transcript_ID)}}">
+            {{t.Ensembl_Transcript_ID}}
+            </a>
+        </td>
+        <td>{{t.Transcript_Start}}</td>
+        <td>{{t.Transcript_End}}</td>
+        <td>{{t.Transcript_Biotype}}</td>
     </tr>
     {% endfor %}
 </tbody>

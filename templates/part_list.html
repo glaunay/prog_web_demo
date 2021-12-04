@@ -1,6 +1,6 @@
 <ul>
     {% for tissue in tissues %}
-    <li><a href="{{url_for('view_part', part=tissue)}}">
+    <li><a href="{{url_for('parts_view', part=tissue)}}">
         {{tissue}}
     </a></li>
     {% endfor %}
